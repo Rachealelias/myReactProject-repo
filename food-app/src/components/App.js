@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <Header />
+        <Header storeName="Racheal's African Kitchen" slogan='The heart of african foods'/>
         <Switch>
           <Route path="/foods/new">
             <FoodForm />

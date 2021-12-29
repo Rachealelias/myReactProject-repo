@@ -1,13 +1,14 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
+
 const style = {
     width: "60%",
     margin: "5% 0 1%",
     padding: "1em",
-    textDecoration:"none",
+    textDecoration: "none",
     color:"blue",
-    backgroundColor: "rgb()",
+    backgroundColor: "rgb(0,0,0)",
     fontWeight: "bold",
     verticalAlign: "center"
 }
@@ -49,7 +50,7 @@ function NavBar() {
            }}
            exactstyle={style}
            to="/foods/new"
-           >Add Food</NavLink> 
+           >New Food</NavLink> 
         </div>
     )
 }

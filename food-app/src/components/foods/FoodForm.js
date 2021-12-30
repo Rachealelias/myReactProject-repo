@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 
-function FoodForm() {
+function FoodForm({handleAddFood}) {
 
     const history = useHistory()
     const [name, setName] = useState("")
@@ -14,9 +14,10 @@ function FoodForm() {
     const [image, setImage] = useState("")
     const [cart, setCart] = useState(false)
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-        if ([name, description, category, price, side, status, size,image, cart].some(val => val.trim() === "")) {
+        if (name.trim() ==="" || description.trim() ==="" || category.trim() ==="" || price.trim() ==="" || side.trim() ==="" || 
+        status.trim() ==="" || size.trim() ==="" || image.trim() ==="" ){
             alert("Please fill out all the fields, thank you!!!")
             return null
         }
@@ -29,6 +30,12 @@ function FoodForm() {
             },
             body: JSON.stringify(newFoods)
         })
+        .then((r) => r.json())
+        .then(handleAddFood)
+        .catch((err) => {
+            console.log("Error:" , err)
+        })
+        
         setName("")
         setDescription("")
         setCategory("")
@@ -38,7 +45,7 @@ function FoodForm() {
         setSize("")
         setImage("")
         setCart("")
-        history.push("/Foods")
+         history.push("/foods") 
     }
 
     return (

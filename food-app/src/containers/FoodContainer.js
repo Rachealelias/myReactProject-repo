@@ -1,10 +1,12 @@
 import React,{useState, useEffect} from 'react'
+//import CategoryFilter from '../components/foods/CategoryFilter';
 import FoodForm from '../components/foods/FoodForm';
 import FoodList from "../components/foods/FoodList"
 
  function FoodContainer() {
 
      const [foods, setFoods] = useState([]);
+     
      const fetchData = async ()=> {
          try{
              const resp = await fetch("http://localhost:3001/foods")
@@ -19,8 +21,10 @@ import FoodList from "../components/foods/FoodList"
      }, [])
 
      function handleAddFood(newFood) {
-        setFoods([...foods, newFood]);
+       return setFoods([...foods, newFood]);
        }
+
+    
     
      return (
          <div className='food-container'>

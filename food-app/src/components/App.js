@@ -8,6 +8,7 @@
   import Footer from './navigation/Footer';
   import Home from './Home';
   import About from './About';
+import SignUp from './SignUp';
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
 
           <Route exact path="/foods">
             <FoodContainer />
+          </Route>
+
+          <Route exact path="/SignUp">
+            <SignUp />
           </Route>
 
           <Route exact path="/about">

@@ -6,8 +6,9 @@ import FoodList from "../components/foods/FoodList"
  function FoodContainer() {
 
      const [foods, setFoods] = useState([]);
-     const [cart, setCart] = useState([]);
-     const [cartView, setCartView] = useState(false)
+     //const [cart, setCart] = useState([]);
+     //const [cartView, setCartView] = useState(false)
+     const [SignedUp, setSignedUp] = useState(false);
      
      const fetchData = async ()=> {
          try{

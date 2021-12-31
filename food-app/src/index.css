@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -15,6 +17,8 @@ code {
 .header{
   height: 210px;
   background-color: darkslategray;
+  display: flex;
+  text-align: center;
 }
 
 .food-container{
@@ -33,4 +37,10 @@ code {
   width: 400px;
   border:2px grey solid;
   margin-bottom: 10px;
+}
+
+.home{
+  height: 600px;
+  width: auto;
+  background-image: url("https://i.pinimg.com/736x/7c/b1/86/7cb18679659f791b1191bea97b74dfc0.jpg");
 }

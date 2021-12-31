@@ -13,7 +13,7 @@ function Header({storeName, slogan}) {
                 style={styles}
                      />
                 </div>
-                <div className='col-6' style={{display: "center", height:"70px", fontSize:"2em"}}>
+                <div className='col-6' style={{display:"inline-block", height:"70px", fontSize:"2em", paddingLeft:"30px", alignContent:"center"}}>
                 <h2>{storeName}</h2> 
                 <h4 style={{color:"gray", fontSize:"30PX"}}>{slogan}</h4>
                 </div>

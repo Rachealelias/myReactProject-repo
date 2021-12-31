@@ -192,5 +192,15 @@
       "cart": false,
       "id": 16
     }
+  ],
+
+  "users": [
+    {
+      "id":1,
+      "firstname": "Racheal",
+      "lastname": "Amuneke",
+      "email": "admin@gmail.com",
+      "password": "kelechi"
+    }
   ]
 }

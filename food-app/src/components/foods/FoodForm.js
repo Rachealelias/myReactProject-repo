@@ -78,7 +78,7 @@ function FoodForm({handleAddFood}) {
                 <input onChange={e => setSize(e.target.value)} type="text" name="size" id="size" value={size} required/><br /><br />
                 <label htmlFor="image">Image Url</label>
                 <input onChange={e => setImage(e.target.value)} type="text" name="image" id="image" value={image} required/><br /><br />
-                <input type="submit" value="Create" />
+                <input type="submit" value="Add Food" />
             </form> 
         </div>
     )

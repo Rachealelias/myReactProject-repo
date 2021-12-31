@@ -6,6 +6,8 @@ import FoodList from "../components/foods/FoodList"
  function FoodContainer() {
 
      const [foods, setFoods] = useState([]);
+     const [cart, setCart] = useState([]);
+     const [cartView, setCartView] = useState(false)
      
      const fetchData = async ()=> {
          try{
@@ -24,10 +26,16 @@ import FoodList from "../components/foods/FoodList"
        return setFoods([...foods, newFood]);
        }
 
-    
+    // const addToCart = (food) => {
+    //     if(!cart.find(atc => atc.name === food.name)) {
+    //         setCart(currentCart => [...currentCart, food])
+    //         alert (`${food.name} was successfully added to cart!`)
+    //     }
+    // }
     
      return (
          <div className='food-container'>
+             {/* <button onClick={() => setCartView(bool => !bool)}>Cart</button> */}
            <FoodList foods={foods}/> 
            <FoodForm  handleAddFood={handleAddFood}/> 
          </div>

@@ -16,23 +16,28 @@ function App() {
         <NavBar />
         <Header storeName="Racheal's African Kitchen" slogan='The heart of african foods'/>
         <Switch>
-          <Route path="/foods/new">
+          <Route exact path="/foods/new">
             <FoodForm />
           </Route>
 
-          <Route path="/foods/:id">
+          <Route exact path="/foods/:id">
             <FoodCard />
           </Route>
 
-          <Route path="/foods">
+          
+          <Route exact path="/cart">
             <FoodContainer />
           </Route>
 
-          <Route path="/about">
+          <Route exact path="/foods">
+            <FoodContainer />
+          </Route>
+
+          <Route exact path="/about">
             <About />
           </Route>
 
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>

@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 
-function FoodForm({handleAddFood}) {
+function FoodForm() {
 
     const history = useHistory()
     const [name, setName] = useState("")
@@ -31,7 +31,7 @@ function FoodForm({handleAddFood}) {
             body: JSON.stringify(newFoods)
         })
         .then((r) => r.json())
-        .then(handleAddFood)
+       
         .catch((err) => {
             console.log("Error:" , err)
         })

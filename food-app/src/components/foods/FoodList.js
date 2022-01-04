@@ -3,27 +3,22 @@
  import CategoryFilter from './CategoryFilter'
 
  function FoodList({foods}) {
-      const[selectedCategory, setSelectedCategory] = useState("")
+      const[selectedCategory, setSelectedCategory] = useState("All")
       
-
-     function handleCategoryChange(category) {
+  function handleCategoryChange(category) {
          setSelectedCategory(category);
       }
 
-
-    
-     const catToDisplay = foods.filter((food) => {
-         if(selectedCategory === "All") return true;
-
-         return food.category === selectedCategory
+      const catToDisplay = foods.filter((food) => {
+        return (selectedCategory === "All") || food.category === selectedCategory
      })
     
-     const displayFoods = foods.map((food) => 
+     const displayFoods = catToDisplay.map((food) => 
      <FoodCard  key={food.id} food={food} catToDisplay={catToDisplay}/>)
      return (
          <div className='food-list'>
-           {displayFoods}  
-           {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }
+             {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }
+           {displayFoods}    
          </div>
      )
  }

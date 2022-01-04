@@ -8,7 +8,8 @@
   import Footer from './navigation/Footer';
   import Home from './Home';
   import About from './About';
-import SignUp from './SignUp';
+  import SignUp from './SignUp';
+  import Cart from './Cart'
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
 
           
           <Route exact path="/cart">
-            <FoodContainer />
+            <Cart />
           </Route>
 
           <Route exact path="/foods">

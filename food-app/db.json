@@ -191,12 +191,23 @@
       "image": "https://topeanderson.com/wp-content/uploads/2019/09/jollof-rice-3.jpg",
       "cart": false,
       "id": 16
+    },
+    {
+      "name": "Jollof rice",
+      "description": "yummy and tasty",
+      "category": "Rice",
+      "price": "60$",
+      "side": "fried plantain, salad",
+      "status": "Available",
+      "size": "M",
+      "image": "https://topeanderson.com/wp-content/uploads/2019/09/jollof-rice-3.jpg",
+      "cart": false,
+      "id": 17
     }
   ],
-
   "users": [
     {
-      "id":1,
+      "id": 1,
       "firstname": "Racheal",
       "lastname": "Amuneke",
       "email": "admin@gmail.com",

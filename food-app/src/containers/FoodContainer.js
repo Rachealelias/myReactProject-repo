@@ -23,9 +23,7 @@ import FoodList from "../components/foods/FoodList"
          fetchData()
      }, [])
 
-     function handleAddFood(newFood) {
-       return setFoods([...foods, newFood]);
-       }
+     
 
     // const addToCart = (food) => {
     //     if(!cart.find(atc => atc.name === food.name)) {
@@ -38,7 +36,7 @@ import FoodList from "../components/foods/FoodList"
          <div className='food-container'>
              {/* <button onClick={() => setCartView(bool => !bool)}>Cart</button> */}
            <FoodList foods={foods}/> 
-           <FoodForm  handleAddFood={handleAddFood}/> 
+           
          </div>
      )
  }

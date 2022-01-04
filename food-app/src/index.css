@@ -21,7 +21,7 @@ code {
   text-align: center;
 }
 
-.food-container{
+.food-list{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;

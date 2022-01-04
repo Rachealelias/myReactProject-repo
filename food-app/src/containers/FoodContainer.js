@@ -1,14 +1,15 @@
 import React,{useState, useEffect} from 'react'
-//import CategoryFilter from '../components/foods/CategoryFilter';
-import FoodForm from '../components/foods/FoodForm';
+import Search from '../components/foods/Search';
 import FoodList from "../components/foods/FoodList"
+
 
  function FoodContainer() {
 
      const [foods, setFoods] = useState([]);
+     const [search, setSearch] = useState("")
      //const [cart, setCart] = useState([]);
      //const [cartView, setCartView] = useState(false)
-     const [SignedUp, setSignedUp] = useState(false);
+    // const [SignedUp, setSignedUp] = useState(false);
      
      const fetchData = async ()=> {
          try{
@@ -23,7 +24,9 @@ import FoodList from "../components/foods/FoodList"
          fetchData()
      }, [])
 
-     
+     const FoodArray = foods.filter((food) =>
+      food.name.toLowerCase().includes(search.toLowerCase())
+  );
 
     // const addToCart = (food) => {
     //     if(!cart.find(atc => atc.name === food.name)) {
@@ -35,7 +38,8 @@ import FoodList from "../components/foods/FoodList"
      return (
          <div className='food-container'>
              {/* <button onClick={() => setCartView(bool => !bool)}>Cart</button> */}
-           <FoodList foods={foods}/> 
+             <Search search={search} setSearch={setSearch}/>
+           <FoodList foods={FoodArray}/> 
            
          </div>
      )

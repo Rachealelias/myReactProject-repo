@@ -8,6 +8,7 @@
          <h5>{food.name}</h5> 
          <h5>{food.description}</h5>
          <h5>{food.category}</h5>
+         <button>Add To Cart</button>
          </div>
      )
  }

@@ -1,14 +1,14 @@
 import React,{useState, useEffect} from 'react'
 import Search from '../components/foods/Search';
 import FoodList from "../components/foods/FoodList"
+//import Cart from '../components/Cart';
 
 
  function FoodContainer() {
 
      const [foods, setFoods] = useState([]);
      const [search, setSearch] = useState("")
-     //const [cart, setCart] = useState([]);
-     //const [cartView, setCartView] = useState(false)
+     
     // const [SignedUp, setSignedUp] = useState(false);
      
      const fetchData = async ()=> {
@@ -28,19 +28,13 @@ import FoodList from "../components/foods/FoodList"
       food.name.toLowerCase().includes(search.toLowerCase())
   );
 
-    // const addToCart = (food) => {
-    //     if(!cart.find(atc => atc.name === food.name)) {
-    //         setCart(currentCart => [...currentCart, food])
-    //         alert (`${food.name} was successfully added to cart!`)
-    //     }
-    // }
+     
     
      return (
          <div className='food-container'>
-             {/* <button onClick={() => setCartView(bool => !bool)}>Cart</button> */}
-             <Search search={search} setSearch={setSearch}/>
-           <FoodList foods={FoodArray}/> 
-           
+             
+          <Search search={search} setSearch={setSearch}/>
+           <FoodList foods={FoodArray}/>   
          </div>
      )
  }

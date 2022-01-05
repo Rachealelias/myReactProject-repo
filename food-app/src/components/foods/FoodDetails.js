@@ -17,6 +17,7 @@ function FoodDetails() {
     const {name, description, category, price, side ,status, size, image} = food
     return (
         <div style = {{border:"solid", width:"300px", margin:"auto"}}>
+            <img alt="food logo" style={{width:"300px"}} src={image} /><br />
            <h3>{name}</h3>
            <p>{description}</p> 
            <p>{category}</p>
@@ -24,9 +25,7 @@ function FoodDetails() {
            <p>{side}</p>
            <p>{status}</p>
            <p>{size}</p>
-           <img alt="food logo" style={{width:"200px"}} src={image} /><br />
-           <button>Add to cart</button>
-        </div>
+            </div>
     )
 }
 

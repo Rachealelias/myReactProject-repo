@@ -1,7 +1,7 @@
   import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
   import FoodForm from './foods/FoodForm';
   import FoodContainer from '../containers/FoodContainer';
-  import FoodCard from './foods/FoodCard';
+  //import FoodCard from './foods/FoodCard';
   import NavBar from './navigation/NavBar'; 
   import Header from './navigation/Header';
   import Footer from './navigation/Footer';

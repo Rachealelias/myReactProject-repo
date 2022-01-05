@@ -189,7 +189,7 @@
       "status": "Available",
       "size": "M",
       "image": "https://topeanderson.com/wp-content/uploads/2019/09/jollof-rice-3.jpg",
-      "cart": false,
+      "cart": true,
       "id": 16
     },
     {

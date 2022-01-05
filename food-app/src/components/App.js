@@ -9,6 +9,7 @@
   import About from './About';
   import SignUp from './SignUp';
   import Cart from './Cart'
+  import FoodDetails from './foods/FoodDetails';
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
             <FoodForm />
           </Route>
 
-          <Route exact path="/foods/:id">
-            <FoodCard />
+          <Route exact path="/foods/:foodId">
+            <FoodDetails />
           </Route>
 
           
@@ -45,6 +46,11 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+
+           <Route path="*">
+            <h3>404 Page Not Found</h3>
+          </Route> 
+        
         </Switch>
       </Router>
       <Footer />

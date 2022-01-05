@@ -8,7 +8,7 @@ function Search({search, setSearch}) {
     return (
         <div className="ui search">
            <div className="ui icon input">
-        <input className="prompt"  value={search} onChange={handleChange}/>
+        <input className="prompt" placeholder='Search' value={search} onChange={handleChange}/>
         <i className="search icon" />
       </div>
     </div>

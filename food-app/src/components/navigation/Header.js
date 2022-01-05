@@ -10,7 +10,7 @@ function Header({storeName, slogan}) {
             <div className='row'>
                 <div className='col-6' style={{display: "flex",height:" 200px", float:"left"}}>
                     <img src="https://t3.ftcdn.net/jpg/02/71/69/52/360_F_271695243_6YC3fCzdw9VoRg3JgyOYBZGcQuNkuVHq.jpg"
-                style={styles}
+               alt="Racheal's kitchen" style={styles}
                      />
                 </div>
                 <div className='col-6' style={{display:"inline-block", height:"70px", fontSize:"2em", paddingLeft:"30px", alignContent:"center"}}>

@@ -1,11 +1,13 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import {useParams, useHistory} from 'react-router-dom'
 //import { useEffect } from 'react/cjs/react.development';
+import { FoodContext } from '../../context/FoodsProvider';
 
 function FoodDetails() {
     let {foodId} = useParams();
     const history = useHistory()
     const [food, setFood] = useState({})
+    const {foods, setFoods} = useContext(FoodContext)
 
     useEffect(() => {
         fetch(`http://localhost:3001/foods/${foodId}`)
@@ -23,6 +25,13 @@ function FoodDetails() {
           body: JSON.stringify({
             cart: !food.cart,
           }),
+        })
+        .then(resp => resp.json())
+        .then(data => {
+        const newArray = foods.map(food => {
+          return food.id === data.id ? data : food
+        })
+        setFoods(newArray)
         })
         history.push("/foods")
           //.then((r) => r.json())

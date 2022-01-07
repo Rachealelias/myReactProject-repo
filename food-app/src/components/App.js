@@ -10,10 +10,12 @@
   import SignUp from './SignUp';
   import Cart from './Cart'
   import FoodDetails from './foods/FoodDetails';
+  import { FoodsProvider } from '../context/FoodsProvider';
 
 function App() {
   return (
     <div className="App">
+      <FoodsProvider >
       <Router>
         <NavBar />
         <Header storeName="Racheal's African Kitchen" slogan='The heart of african foods'/>
@@ -54,6 +56,7 @@ function App() {
         </Switch>
       </Router>
       <Footer />
+      </FoodsProvider>
     </div>
   );
 }

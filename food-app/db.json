@@ -58,7 +58,7 @@
       "status": "Available",
       "size": "L",
       "image": "https://topeanderson.com/wp-content/uploads/2019/09/jollof-rice-3.jpg",
-      "cart": false
+      "cart": true
     },
     {
       "id": 6,
@@ -94,7 +94,7 @@
       "status": "Available",
       "size": "L",
       "image": "https://i.pinimg.com/originals/b4/17/89/b41789b83c058f1114d5b6cd850a325d.jpg",
-      "cart": false
+      "cart": true
     },
     {
       "id": 9,

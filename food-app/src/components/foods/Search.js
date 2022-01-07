@@ -6,12 +6,11 @@ function Search({search, setSearch}) {
         setSearch(e.target.value)
        }
     return (
-        <div className="ui search">
-           <div className="ui icon input">
-        <input className="prompt" placeholder='Search' value={search} onChange={handleChange}/>
-        <i className="search icon" />
+        <div className="ui large fluid icon input">
+        <input className="prompt" placeholder='Search here' value={search} onChange={handleChange}/>
+        <i className="circular search link icon" />
       </div>
-    </div>
+
         
     )
 }

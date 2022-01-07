@@ -17,7 +17,7 @@
      <FoodCard  key={food.id} food={food} catToDisplay={catToDisplay}/>)
      return (
          <div className='food-list'>
-             {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }
+          {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }
            {displayFoods}    
          </div>
      )

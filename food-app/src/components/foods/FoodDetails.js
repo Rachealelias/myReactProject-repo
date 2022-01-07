@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 //import { useEffect } from 'react/cjs/react.development';
 
 function FoodDetails() {
     let {foodId} = useParams();
+    const history = useHistory()
     const [food, setFood] = useState({})
 
     useEffect(() => {
@@ -12,6 +13,21 @@ function FoodDetails() {
         .then(food => setFood(food))
         .catch(err => alert(err))
     }, [foodId])
+
+    function handleAddToCartClick() {
+        fetch(`http://localhost:3001/foods/${foodId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            cart: !food.cart,
+          }),
+        })
+        history.push("/foods")
+          //.then((r) => r.json())
+         // .then((updateItem) => setCart(updateItem));
+      }
 
    // const foodClick = foods.find(food => food.id === Number(foodId))
     const {name, description, category, price, side ,status, size, image} = food
@@ -25,6 +41,9 @@ function FoodDetails() {
            <p>{side}</p>
            <p>{status}</p>
            <p>{size}</p>
+           <button onClick={handleAddToCartClick}>
+         {food.cart ? "Delete From" : "Add to"} Cart
+             </button>
             </div>
     )
 }

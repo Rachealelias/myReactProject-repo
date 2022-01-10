@@ -212,6 +212,16 @@
       "lastname": "Amuneke",
       "email": "admin@gmail.com",
       "password": "kelechi"
+    },
+    {
+      "email": "Justgetmailing@yahoo.com ",
+      "password": "5678",
+      "id": 2
+    },
+    {
+      "email": "kingsley@gmail.com",
+      "password": "789008",
+      "id": 3
     }
   ]
 }

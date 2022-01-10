@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link }from 'react-router-dom'
 
 function SignUp() {
 const history = useHistory()
@@ -50,6 +50,7 @@ const history = useHistory()
                 
                 <input type="submit" value="Sign Up" />
             </form>  
+            <span>Signed up? please</span> <Link to='/login'><button>Login</button></Link>
         </div>
     )
 }

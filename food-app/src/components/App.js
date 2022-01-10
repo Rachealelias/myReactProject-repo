@@ -10,6 +10,7 @@
   import SignUp from './SignUp';
   import Cart from './Cart'
   import FoodDetails from './foods/FoodDetails';
+  import Login from './Login';
 
 function App() {
   return (
@@ -35,8 +36,12 @@ function App() {
             <FoodContainer />
           </Route>
 
-          <Route exact path="/SignUp">
+          <Route exact path="/signUp">
             <SignUp />
+          </Route>
+
+          <Route exact path="/login">
+            <Login />
           </Route>
 
           <Route exact path="/about">

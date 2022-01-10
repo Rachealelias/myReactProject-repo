@@ -42,8 +42,17 @@ function NavBar() {
                fontWeight:"bolder",
                color: "red"
            }}
+          to="/signup"
+           >SignUp</NavLink> 
+
+           <NavLink
+           activeStyle={{
+               fontWeight:"bolder",
+               color: "red"
+           }}
           to="/cart"
            >Cart</NavLink> 
+
         </div>
     )
 }

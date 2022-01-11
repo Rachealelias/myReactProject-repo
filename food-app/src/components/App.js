@@ -11,10 +11,16 @@
   import Cart from './Cart'
   import FoodDetails from './foods/FoodDetails';
   import { FoodsProvider } from '../context/FoodsProvider';
+import Login from './Login';
+import Logout from './Logout';
+import { UserProvider } from '../context/UserProvider';
+
+
 
 function App() {
   return (
     <div className="App">
+      <UserProvider>
       <FoodsProvider >
       <Router>
         <NavBar />
@@ -37,9 +43,18 @@ function App() {
             <FoodContainer />
           </Route>
 
-          <Route exact path="/SignUp">
+          <Route exact path="/signUp">
             <SignUp />
           </Route>
+
+          <Route exact path="/login">
+            <Login />
+          </Route>
+
+          <Route exact path="/logout">
+            <Logout />
+          </Route>
+
 
           <Route exact path="/about">
             <About />
@@ -57,6 +72,7 @@ function App() {
       </Router>
       <Footer />
       </FoodsProvider>
+      </UserProvider>
     </div>
   );
 }

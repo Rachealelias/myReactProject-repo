@@ -1,7 +1,9 @@
-import React,{useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import React,{useContext, useState} from 'react'
+import {useHistory, Redirect} from 'react-router-dom'
+import { UserContext } from '../../context/UserProvider'
 
 function FoodForm() {
+    const {user, setUser} = useContext(UserContext)
 
     const history = useHistory()
     const [name, setName] = useState("")
@@ -46,6 +48,11 @@ function FoodForm() {
         setImage("")
         setCart("")
          history.push("/foods") 
+         if(user.firstname === "Racheal" && user.email === "admin@gmail.com"){
+           setUser()
+         }else{
+         <Redirect to ="/"/>
+         }
     }
 
     return (

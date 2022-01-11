@@ -212,6 +212,13 @@
       "lastname": "Amuneke",
       "email": "admin@gmail.com",
       "password": "kelechi"
+    },
+    {
+      "firstname": "Bamidele",
+      "lastname": "Moses",
+      "email": "Bamidele@gmail.com",
+      "password": "Bami252",
+      "id": 2
     }
   ]
 }

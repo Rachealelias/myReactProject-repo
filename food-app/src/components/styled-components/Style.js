@@ -50,6 +50,19 @@ const Headers = styled.div`
     width:auto;
   }
 `
+const Details = styled.div`
+border:solid; 
+width:700px;
+ margin:auto;
+ height: 700px;
+ padding-left: 100px;
+
+ img{
+     width:500px;
+    
+
+ }
+`
 
 
- export {Container, Card, theme, Headers}
+ export {Container, Card, theme, Headers, Details}

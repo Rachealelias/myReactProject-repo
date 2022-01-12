@@ -1,6 +1,6 @@
 import React,{useState,useEffect, useContext} from 'react'
 import {useParams, useHistory} from 'react-router-dom'
-//import { useEffect } from 'react/cjs/react.development';
+import { Details } from '../styled-components/Style';
 import { FoodContext } from '../../context/FoodsProvider';
 
 function FoodDetails() {
@@ -41,9 +41,10 @@ function FoodDetails() {
    // const foodClick = foods.find(food => food.id === Number(foodId))
     const {name, description, category, price, side ,status, size, image} = food
     return (
-        <div style = {{border:"solid", width:"300px", margin:"auto"}}>
-            <img alt="food logo" style={{width:"300px"}} src={image} /><br />
+        <div >
+          <Details>
            <h3>{name}</h3>
+           <img alt="food logo" src={image} /><br />
            <p>{description}</p> 
            <p>{category}</p>
            <p>${price}</p>
@@ -53,6 +54,7 @@ function FoodDetails() {
            <button onClick={handleAddToCartClick}>
          {food.cart ? "Delete From" : "Add to"} Cart
              </button>
+             </Details>
             </div>
     )
 }

@@ -1,6 +1,8 @@
  import React,{useState} from 'react'
  import FoodCard from './FoodCard'
  import CategoryFilter from './CategoryFilter'
+ import { Container } from '../styled-components/Style'
+ 
 
  function FoodList({foods}) {
       const[selectedCategory, setSelectedCategory] = useState("All")
@@ -16,11 +18,13 @@
      const displayFoods = catToDisplay.map((food) => 
      <FoodCard  key={food.id} food={food} catToDisplay={catToDisplay}/>)
      return (
-         <div className='food-list'>
+         <div>
           {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }
-           {displayFoods}    
+           <Container>{displayFoods}</Container>    
          </div>
      )
  }
+
+ 
 
  export default FoodList

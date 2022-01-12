@@ -14,21 +14,21 @@ code {
     monospace;
 }
 
-.header{
+/* .header{
   height: 210px;
   background-color: darkslategray;
   display: flex;
   text-align: center;
-}
+} */
 
-.food-list{
+/* .food-list{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-}
+} */
 
-.food-card {
+/* .food-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@ code {
   width: 400px;
   border:2px grey solid;
   margin-bottom: 10px;
-}
+} */
 
 .home{
   height: 600px;

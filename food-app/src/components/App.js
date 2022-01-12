@@ -1,7 +1,6 @@
   import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
   import FoodForm from './foods/FoodForm';
   import FoodContainer from '../containers/FoodContainer';
-  //import FoodCard from './foods/FoodCard';
   import NavBar from './navigation/NavBar'; 
   import Header from './navigation/Header';
   import Footer from './navigation/Footer';
@@ -11,15 +10,17 @@
   import Cart from './Cart'
   import FoodDetails from './foods/FoodDetails';
   import { FoodsProvider } from '../context/FoodsProvider';
-import Login from './Login';
-import Logout from './Logout';
-import { UserProvider } from '../context/UserProvider';
-
+  import Login from './Login';
+  import Logout from './Logout';
+  import { UserProvider } from '../context/UserProvider';
+  import {ThemeProvider} from 'styled-components';
+  import { theme } from './styled-components/Style';
 
 
 function App() {
   return (
     <div className="App">
+      <ThemeProvider theme={theme}>
       <UserProvider>
       <FoodsProvider >
       <Router>
@@ -73,8 +74,11 @@ function App() {
       <Footer />
       </FoodsProvider>
       </UserProvider>
+      </ThemeProvider>
     </div>
   );
 }
+
+
 
 export default App;

@@ -1,18 +1,30 @@
-# Getting Started with Create React App
+A REACT E-COMMERCE FOOD APPLICATION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+INTRODUCTION
 
-## Available Scripts
+Welcome to Racheal's e-commerce food application! 
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) for the Frontend and a Json server template for the backend.
+This project consist of over 20 components, a RESTful API and over 5 client-side Routes using react-router and navigation links.
+Styled Components was used for the styling, i also made use of the react use-context.
+It fetches data from the backend db.json file using the GET request and displays them in the right components.
+This application allows a user to send data to the backend using the POST request, to delete a data using the DELETE request and also add foods to the cart using the PATCH request.
+A user can sign, login and also log out.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SETUP
 
-The page will reload when you make changes.\
+All the food data about can be found in the db.json file. We'll be using json-server to create a RESTful API for our database.
+
+Run npm install to install our dependencies.
+
+ Run npm run server to start up json-server on http://localhost:3001.
+
+In the project directory, run npm start to start up our React app at http://localhost:3000 to view it in your browser.
+
+The page will reload when you make changes
 You may also see any lint errors in the console.
+
 
 ### `npm test`
 

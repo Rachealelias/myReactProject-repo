@@ -2,12 +2,14 @@ import React,{useState,useEffect, useContext} from 'react'
 import {useParams, useHistory} from 'react-router-dom'
 import { Details } from '../styled-components/Style';
 import { FoodContext } from '../../context/FoodsProvider';
+import { UserContext } from '../../context/UserProvider';
 
 function FoodDetails() {
     let {foodId} = useParams();
     const history = useHistory()
     const [food, setFood] = useState({})
     const {foods, setFoods} = useContext(FoodContext)
+    const {loggedin, user} = useContext(UserContext)
 
     useEffect(() => {
         fetch(`http://localhost:3001/foods/${foodId}`)
@@ -51,9 +53,9 @@ function FoodDetails() {
            <p>{side}</p>
            <p>{status}</p>
            <p>{size}</p>
-           <button onClick={handleAddToCartClick}>
+         { Object.keys(user).length>1 ? <button onClick={handleAddToCartClick}>
          {food.cart ? "Delete From" : "Add to"} Cart
-             </button>
+             </button> : "Please log in/ sign up to add to cart"}
              </Details>
             </div>
     )

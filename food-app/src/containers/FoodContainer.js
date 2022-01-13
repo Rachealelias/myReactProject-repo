@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useContext} from 'react'
+import React,{useState, useContext} from 'react'
 import Search from '../components/foods/Search';
 import FoodList from "../components/foods/FoodList"
 import {FoodContext} from '../context/FoodsProvider'
@@ -27,6 +27,13 @@ console.log(foods)
     //      fetchData()
     //  }, [])
 
+    function deleteFood(id){
+        const foodsFiltered = foods.filter(f => f.id !== id);
+        console.log(id)
+            setFoods(foodsFiltered);
+            console.log(foods)
+      }
+
      const FoodArray = foods.filter((food) =>
       food.name.toLowerCase().includes(search.toLowerCase())
   );
@@ -37,7 +44,7 @@ console.log(foods)
          <div className='food-container'>
              
           <Search search={search} setSearch={setSearch}/>
-           <FoodList foods={FoodArray}/>   
+           <FoodList foods={FoodArray} deleteFood={deleteFood}/>   
          </div>
      )
  }

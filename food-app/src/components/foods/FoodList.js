@@ -4,7 +4,7 @@
  import { Container } from '../styled-components/Style'
  
 
- function FoodList({foods}) {
+ function FoodList({foods, deleteFood}) {
       const[selectedCategory, setSelectedCategory] = useState("All")
       
   function handleCategoryChange(category) {
@@ -16,7 +16,7 @@
      })
     
      const displayFoods = catToDisplay.map((food) => 
-     <FoodCard  key={food.id} food={food} catToDisplay={catToDisplay}/>)
+     <FoodCard  key={food.id} food={food} catToDisplay={catToDisplay} deleteFood={deleteFood}/>)
      return (
          <div>
           {<CategoryFilter selectedCategory={selectedCategory} handleCategoryChange={handleCategoryChange}/> }

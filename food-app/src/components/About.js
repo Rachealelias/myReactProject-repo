@@ -1,8 +1,10 @@
 import React from 'react'
+import { AboutStyle } from './styled-components/Style'
 
 function About() {
     return (
-        <div className='about'>
+        <div>
+            <AboutStyle></AboutStyle>
         
         </div>
     )

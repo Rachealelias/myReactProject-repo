@@ -9,7 +9,7 @@ function FoodDetails() {
     const history = useHistory()
     const [food, setFood] = useState({})
     const {foods, setFoods} = useContext(FoodContext)
-    const {loggedin, user} = useContext(UserContext)
+    const {user} = useContext(UserContext)
 
     useEffect(() => {
         fetch(`http://localhost:3001/foods/${foodId}`)

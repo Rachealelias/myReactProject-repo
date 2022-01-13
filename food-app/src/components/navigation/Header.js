@@ -15,9 +15,9 @@ function Header({storeName, slogan}) {
                alt="Racheal's kitchen"
                      />
                 </div>
-                <div className='col-6' style={{display:"inline-block"}}>
+                <div className='col-6' id="text">
                 <h2>{storeName}</h2> 
-                <h4 style={{color:"gray", fontSize:"30PX"}}>{slogan}</h4>
+                <h6>{slogan}</h6>
                 </div>
             </div>
             </Headers>

@@ -14,21 +14,21 @@ code {
     monospace;
 }
 
-.header{
+/* .header{
   height: 210px;
   background-color: darkslategray;
   display: flex;
   text-align: center;
-}
+} */
 
-.food-list{
+/* .food-list{
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
-}
+} */
 
-.food-card {
+/* .food-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,19 +37,19 @@ code {
   width: 400px;
   border:2px grey solid;
   margin-bottom: 10px;
-}
+} */
 
-.home{
+/* .home{
   height: 600px;
   width: auto;
   background-image: url("https://i.pinimg.com/736x/7c/b1/86/7cb18679659f791b1191bea97b74dfc0.jpg");
-}
+} */
 
-.about{
+/* .about{
   height: 600px;
   width:auto;
   background-image: url("https://image.freepik.com/free-vector/white-textured-paper_53876-86282.jpg");
-}
+} */
 
 .footer{
 justify-content: center;

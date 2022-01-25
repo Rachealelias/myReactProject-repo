@@ -1,11 +1,13 @@
-import React,{useState} from 'react'
-import {useHistory, Link }from 'react-router-dom'
+import React,{useState,useContext} from 'react'
+import {useHistory, Link ,Redirect}from 'react-router-dom'
+import { UserContext } from '../context/UserProvider'
 
 function Login() {
 const history = useHistory()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const {user,setUser, loggedIn, setLoggedIn} = useContext(UserContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -20,7 +22,8 @@ const history = useHistory()
         .then(data => {
         const userObj = data.find(user => user.email === email && user.password===password)
         if(userObj){
-            console.log(userObj)
+            setLoggedIn(true)
+            setUser(userObj)
         }else{
             setError('Incorrect email or password')
         }
@@ -33,6 +36,9 @@ const history = useHistory()
         setEmail("")
         setPassword("")
    // history.push("/foods") 
+    }
+    if (loggedIn){
+  return <Redirect to ="/foods"/>
     }
 
     return (

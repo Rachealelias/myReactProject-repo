@@ -1,7 +1,10 @@
-import React,{useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import React,{useContext, useState} from 'react'
+import {useHistory, Redirect} from 'react-router-dom'
+import { UserContext } from '../../context/UserProvider'
+import { FoodFormStyle } from '../styled-components/Style'
 
 function FoodForm() {
+    const {user} = useContext(UserContext)
 
     const history = useHistory()
     const [name, setName] = useState("")
@@ -46,10 +49,14 @@ function FoodForm() {
         setImage("")
         setCart("")
          history.push("/foods") 
-    }
-
+    }  
+    if(Object.keys(user).length<1 || user.firstname !== "Racheal" || user.email !== "admin@gmail.com"){
+       return <Redirect to ="/"/>
+      }
+ 
     return (
         <div>
+            <FoodFormStyle>
            <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input onChange={e => setName(e.target.value)} type="text" name="name" id="name" value={name} required/><br /><br />
@@ -80,6 +87,7 @@ function FoodForm() {
                 <input onChange={e => setImage(e.target.value)} type="text" name="image" id="image" value={image} required/><br /><br />
                 <input type="submit" value="Add Food" />
             </form> 
+            </FoodFormStyle>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useHistory, Link }from 'react-router-dom'
+import { SignupStyle } from './styled-components/Style'
 
 function SignUp() {
 const history = useHistory()
@@ -38,6 +39,7 @@ const history = useHistory()
 
     return (
         <div>
+            <SignupStyle>
            <form onSubmit={handleSubmit}>
                 <label htmlFor="firstname">Firstname</label>
                 <input onChange={e => setFirstName(e.target.value)} type="text" name="firstname" id="firstname" value={firstname} required/><br /><br />
@@ -51,6 +53,7 @@ const history = useHistory()
                 <input type="submit" value="Sign Up" />
             </form>  
             <span>Signed up? please</span> <Link to='/login'><button>Login</button></Link>
+            </SignupStyle>
         </div>
     )
 }

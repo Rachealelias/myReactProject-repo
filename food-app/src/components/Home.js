@@ -1,9 +1,10 @@
 import React from 'react'
+import { HomeStyle } from './styled-components/Style'
 
 function Home() {
     return (
-        <div className='home'>
-            
+        <div>
+          <HomeStyle></HomeStyle>  
         </div>
     )
 }

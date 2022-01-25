@@ -4,7 +4,7 @@
 
 ## Welcome to Racheal's e-commerce food application!
 
-This project was bootstrapped with Create React App for the Frontend and a Json server template for the backend. This project consist of over 20 components, a RESTful API and over 5 client-side Routes using react-router and navigation links. Styled Components was used for the styling, i also made use of the react use-context. It fetches data from the backend db.json file using the GET request and displays them in the right components. This application allows a user to send data to the backend using the POST request, to delete a data using the DELETE request and also add foods to the cart using the PATCH request. A user can sign, login and also log out.
+This project was bootstrapped with Create React App for the Frontend and a Json server template for the backend. This project consist of over 20 components, a RESTful API and over 5 client-side Routes using react-router and navigation links. Styled Components was used for the styling, i also made use of the react use-context hook for some of the components which allows us to share "global" data between components without passing the data via props. It fetches data from the backend db.json file using the GET request and displays them in the right components. This application allows a user to send data to the backend using the POST request, to delete a data using the DELETE request and also add foods to the cart using the PATCH request. A user can sign, login and also log out.
 
 ## SETUP
 

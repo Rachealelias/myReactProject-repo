@@ -10,7 +10,7 @@
       "status": "Available",
       "size": "L",
       "image": "https://i.ytimg.com/vi/h6oCyJ69Mhg/maxresdefault.jpg",
-      "cart": true
+      "cart": false
     },
     {
       "id": 2,
@@ -207,6 +207,13 @@
       "email": "Bamidele@gmail.com",
       "password": "Bami252",
       "id": 2
+    },
+    {
+      "firstname": "kristle",
+      "lastname": "Amuneke",
+      "email": "kristle@gmail.com",
+      "password": "45678",
+      "id": 3
     }
   ]
 }

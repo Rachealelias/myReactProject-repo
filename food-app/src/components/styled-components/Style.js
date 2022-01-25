@@ -13,6 +13,8 @@ const theme ={
 const Container = styled.div`
  display: flex;
  flex-wrap: wrap;
+ background-color: rgb() ;
+
  `
 
  const Card = styled.div`

@@ -9,7 +9,7 @@ function Header({storeName, slogan}) {
     return (
         <div className='header'>
             <Headers>
-            <div className='row'>
+            <div className='row' style={{display:"flex"}}>
                 <div className='col-6'>
                     <img src="https://t3.ftcdn.net/jpg/02/71/69/52/360_F_271695243_6YC3fCzdw9VoRg3JgyOYBZGcQuNkuVHq.jpg"
                alt="Racheal's kitchen"

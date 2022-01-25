@@ -1,6 +1,6 @@
-A REACT E-COMMERCE FOOD APPLICATION
+# A REACT E-COMMERCE FOOD APPLICATION
 
-INTRODUCTION
+## INTRODUCTION
 
 Welcome to Racheal's e-commerce food application! 
 
@@ -12,7 +12,7 @@ This application allows a user to send data to the backend using the POST reques
 A user can sign, login and also log out.
 
 
-SETUP
+## SETUP
 
 All the food data about can be found in the db.json file. We'll be using json-server to create a RESTful API for our database.
 
